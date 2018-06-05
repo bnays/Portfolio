@@ -41,12 +41,12 @@
 }
 text{
 	stroke: #fff !important;
-	fill: none !important;
+	fill: #fff !important;
 	stroke-width:5px;
     stroke-dasharray: 4000;
 	stroke-dashoffset:0;
 	opacity: 1;
-	animation: animate 2s ease-in-out;
+	animation: animate 5s ease-in-out;
 }
 
 @keyframes animate{
@@ -56,10 +56,29 @@ text{
 		stroke-dasharray: 1 500;
 	    stroke-dashoffset: 500;
 	}
+	30%{
+		opacity: 1;
+		stroke-dasharray: 400;
+		stroke-dashoffset:23;
+		fill:none !important;
+	}
+	60%{
+		opacity: 1;
+		stroke-dasharray: 4000;
+		stroke-dashoffset:0;
+		fill:#fff !important;
+	}
+	80%{
+		opacity: 1;
+		stroke-dasharray: 400;
+		stroke-dashoffset:23;
+		/*fill:#fff !important;*/
+	}
 	100%{
 		opacity: 1;
 		stroke-dasharray: 400;
 		stroke-dashoffset:23;
+		fill:#fff !important;
 	}
 }
 
