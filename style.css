@@ -1,0 +1,180 @@
+@font-face {
+    font-family: myFont;
+    src: url("xtreem/XtreemThin_PERSONAL_USE.ttf");
+}
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    /*display: none;  Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(96,98,102,0.4); /* Black background with opacity */
+    z-index: 0; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+}
+.menu-slider {
+    position: fixed; /* Sit on top of the page content */
+    /*display: none;  Hidden by default */
+    width: 25%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    opacity: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.56); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    animation: animate-slide 3s; 
+}
+
+.wrapper{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 28%;
+    z-index: 1;
+}
+text{
+	stroke: #fff !important;
+	fill: none !important;
+	stroke-width:5px;
+    stroke-dasharray: 4000;
+	stroke-dashoffset:0;
+	opacity: 1;
+	animation: animate 2s ease-in-out;
+}
+
+@keyframes animate{
+	0%{
+		opacity: 0;
+		fill: none;
+		stroke-dasharray: 1 500;
+	    stroke-dashoffset: 500;
+	}
+	100%{
+		opacity: 1;
+		stroke-dasharray: 400;
+		stroke-dashoffset:23;
+	}
+}
+
+.animate_slide_right{
+	animation: animate-slide 3s;
+}
+
+@keyframes animate-slide{
+	0%{ opacity: 0; width: 0%; }
+	100%{ opacity: 1; width: 25%; }
+}
+.nav{
+	color: #fff;
+}
+ul.nav{
+	padding-top: 100px;
+}
+ul.nav li{
+    padding: 26px;
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.landing_page_container{
+	height: 100vh;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	overflow: hidden;
+	background-position: bottom;
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	padding: 40px 0;
+	/*display: table;*/
+}
+h1, p, span{
+	font-weight: 800;
+}
+
+ul.social-container li{
+	list-style: none;
+	display: inline;
+}
+.content_wrapper{
+	position: relative;
+	margin: 0 auto;
+}
+.heading{
+	padding: 0;
+	height: 2rem;
+	width: 100%;
+	display: block;
+	margin-top: 0;	
+	text-align: center;
+}
+.menu-icon{
+	height:1.5rem;
+	width: 2.5rem;
+	display: inline-block;
+	cursor:pointer;
+}
+.header__item{
+	display: inline-block;
+	float: left;
+}
+
+.menu-icon__line{
+	width: 1.5rem;
+	height: .2rem;
+	display: block;
+	background: #fff;
+}
+
+.menu-icon__line:before, .menu-icon__line:after{
+	content: '';
+	width:1.5rem;
+	height: 0.2rem;
+	display: inline-block;
+	position: relative;
+	background: #fff;
+}
+
+.menu-icon__line:before{
+	left: .5rem;
+	top: -0.6rem;
+}
+
+.menu-icon__line:after{
+	top: -1.8rem;
+}
+.social-container{
+	overflow:hidden;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.social-container .social-icon{
+	float: left;
+	cursor: pointer;
+	margin: 0px 15px;
+	font-size: 18px;
+}
+.svg-stroke{
+	text-align: center;
+	font-family: myFont;
+	font-size: 300px;
+}
+.body-section{
+	position: relative;
+}
+.left_center_text{
+	position: absolute;
+	width: 300px;
+	top: 25rem;
+    transform: rotate(-90deg);
+    left: -64%;
+}
