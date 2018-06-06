@@ -11,9 +11,9 @@
 </head>
 <body>
 	<div class="menu-slider">
-		<a href="javascript:;" class="close-menu">
+		<div class="close-menu">
 			<span><i class="fas fa-chevron-left"></i></span>
-		</a>
+		</div>
 		<ul class="nav">
 			<li class="nav-li">
 				Home
@@ -97,12 +97,15 @@
 <script>
 	$(document).ready(function(){
 	    $(".menu-icon").on("click", function(){
-	        $(".menu-slider").addClass("animate_slide_right").removeClass("animate_slide_left");
+	        $(".menu-slider").removeClass("animate_slide_left").addClass("animate_slide_right");
 	        $(".menu-icon").hide();
 	    });
 	    $(".close-menu").on("click", function(){
-    		$(".menu-slider").addClass("animate_slide_left").removeClass("animate_slide_right");
-	        $(".menu-icon").hide();
+    		$(".menu-slider").removeClass("animate_slide_right").addClass("animate_slide_left");
+	        setTimeout(function(){ 
+	        	$(".menu-icon").show();
+			}, 100);
+
 	    });
 	});
 </script>

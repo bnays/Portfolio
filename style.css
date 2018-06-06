@@ -1,3 +1,11 @@
+@font-face {
+    font-family: myFont;
+    src: url("xtreem/XtreemThin_PERSONAL_USE.ttf");
+}
+.cls-2{
+	font-family: myFont !important;
+	font-weight: 700 !important;
+}
 #overlay {
     position: fixed;
     width: 100%; 
@@ -25,15 +33,15 @@ text{
     stroke-dasharray: 4000;
 	stroke-dashoffset:0;
 	opacity: 1;
-	animation: animate 6s cubic-bezier(0,0.23,1,0.1);
+	animation: animate 4s cubic-bezier(0,0.23,1,0.1);
 }
 
 @keyframes animate{
 	0%{
 		opacity: 0.8;
 		fill: none;
-		stroke-dasharray: 5 100;
-	    stroke-dashoffset: 0;
+		stroke-dasharray: 18 400;
+	    stroke-dashoffset: 1000;
 	}
 	90%{
 		opacity: 1;
@@ -59,7 +67,7 @@ text{
     bottom: 0;
     background-color: rgba(0,0,0,0.56); 
     z-index: 2;
-    transition: all 1s;
+    transition: all 0.4s;
 }
 .menu-slider .close-menu{
 	position: absolute;
@@ -70,13 +78,18 @@ text{
 .menu-slider .close-menu span .fas{
 	color: #fff;
 	font-size: 20px;
+	cursor: pointer;
 }
 
 .animate_slide_right{
 	display: block; opacity: 1; width: 25%; 
 }
 .animate_slide_left{
-	display: block; opacity: 1; width: 25%; 
+	animation: animated 0.4s;
+}
+@keyframes animated{
+	from { display: block; opacity: 1; width: 25%; }
+	to { width: 0%; display: none; opacity: 0; }
 }
 .nav{
 	color: #fff;
@@ -125,6 +138,7 @@ ul.social-container li{
 .menu-icon{
 	height:1.5rem;
 	width: 2.5rem;
+	padding: 5px 10px;
 	display: inline-block;
 	cursor:pointer;
 }
