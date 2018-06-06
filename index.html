@@ -11,6 +11,9 @@
 </head>
 <body>
 	<div class="menu-slider">
+		<a href="javascript:;" class="close-menu">
+			<span><i class="fas fa-chevron-left"></i></span>
+		</a>
 		<ul class="nav">
 			<li class="nav-li">
 				Home
@@ -80,9 +83,6 @@
 						<div class="col-md-2">
 							<p class="left_center_text"> F 23 F 16 N 12 D D | D D 21 N 61 F 32 F </p>
 						</div>
-						<!-- <div class="col-md-8">
-							<h1 class="svg-stroke">bnays</h1>
-						</div> -->
 						<div class="col-md-2">
 						</div>
 					</div>	
@@ -97,8 +97,12 @@
 <script>
 	$(document).ready(function(){
 	    $(".menu-icon").on("click", function(){
-	        console.log("animation activated");
-	        $(".menu-slider").addClass("animate_slide_right");
+	        $(".menu-slider").addClass("animate_slide_right").removeClass("animate_slide_left");
+	        $(".menu-icon").hide();
+	    });
+	    $(".close-menu").on("click", function(){
+    		$(".menu-slider").addClass("animate_slide_left").removeClass("animate_slide_right");
+	        $(".menu-icon").hide();
 	    });
 	});
 </script>
