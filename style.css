@@ -184,6 +184,9 @@ ul.social-container li{
 	margin: 0px 15px;
 	font-size: 18px;
 }
+.social-container .social-icon a{
+	color:#fff !important;
+}
 .body-section{
 	position: relative;
 }
